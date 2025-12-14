@@ -80,17 +80,23 @@ Los tests están implementados con:
 
 ## 📂 Estructura del proyecto
 
-\`\`\`txt
-app/
-exercise1/page.tsx
-exercise2/page.tsx
-components/
-Range/
-Range.tsx
-Range.test.tsx
-services/
-rangeService.ts
-fixedRangeService.ts
-\`\`\`
+```text
+.
+├── app
+│   ├── exercise1
+│   │   └── page.tsx
+│   └── exercise2
+│       └── page.tsx
+│
+├── src
+│   ├── components
+│   │   └── Range
+│   │       ├── Range.tsx
+│   │       └── Range.test.tsx
+│   │
+│   └── services
+│       ├── rangeService.ts
+│       └── fixedRangeService.ts
+
 
 ---
