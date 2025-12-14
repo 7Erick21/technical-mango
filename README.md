@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥭 Mango Range Test
 
-## Getting Started
+Prueba técnica para **Mango**: implementación de un componente \`<Range />\` en **Next.js** con **TypeScript**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📦 Requisitos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js >= 18
+- pnpm >= 8
+- Next.js 13+ con \`appDir\`
+- TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Instalación
 
-## Learn More
+Clona el repositorio y ejecuta:
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`bash
+pnpm install
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ▶️ Ejecución en desarrollo
 
-## Deploy on Vercel
+\`\`\`bash
+pnpm dev --port 8080
+\`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La aplicación estará disponible en:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- http://localhost:8080/exercise1  
+  → **Normal Range**
+
+- http://localhost:8080/exercise2  
+  → **Fixed Values Range**
+
+---
+
+## 🧩 Ejercicio
+
+### Exercise 1: Normal Range
+
+- Rango con valores mínimo y máximo obtenidos de un servicio mock  
+  (\`services/rangeService.ts\`)
+- Dos manejadores (handles) arrastrables
+- Los valores se pueden editar manualmente en las etiquetas
+- Los valores **no pueden cruzarse**
+- Animaciones de **hover** y **drag** incluidas
+
+---
+
+### Exercise 2: Fixed Values Range
+
+- Rango con valores fijos  
+  \`[1.99, 5.99, 10.99, 30.99, 50.99, 70.99]\`  
+  obtenidos de un servicio mock (\`services/fixedRangeService.ts\`)
+- Dos manejadores arrastrables
+- Los valores se muestran como etiquetas (**no editables**)
+- Los valores **no pueden cruzarse**
+
+---
+
+## 🧪 Tests
+
+Ejecuta los tests con:
+
+\`\`\`bash
+pnpm test
+\`\`\`
+
+Los tests están implementados con:
+
+- **Jest**
+- **React Testing Library**
+
+---
+
+## 📂 Estructura del proyecto
+
+\`\`\`txt
+app/
+exercise1/page.tsx
+exercise2/page.tsx
+components/
+Range/
+Range.tsx
+Range.test.tsx
+services/
+rangeService.ts
+fixedRangeService.ts
+\`\`\`
+
+---
