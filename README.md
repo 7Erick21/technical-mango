@@ -15,7 +15,7 @@ El objetivo es demostrar buenas prácticas de:
 
 - Node.js >= 18
 - pnpm >= 8
-- Next.js 13+ (App Router)
+- Next.js 16+ (App Router)
 - TypeScript
 
 ---
@@ -24,22 +24,26 @@ El objetivo es demostrar buenas prácticas de:
 
 Clona el repositorio e instala las dependencias:
 
-pnpm install
 
+```bash
+pnpm install
+```
 ---
 
 ## ▶️ Ejecución en desarrollo
 
 Inicia el servidor de desarrollo:
 
-pnpm dev --port 8080
+```bash
+pnpm dev --port 3000
+```
 
 La aplicación estará disponible en:
 
-- http://localhost:8080/exercise1  
+- http://localhost:3000/exercise1  
   → Normal Range
 
-- http://localhost:8080/exercise2  
+- http://localhost:3000/exercise2  
   → Fixed Values Range
 
 ---
@@ -73,7 +77,9 @@ La aplicación estará disponible en:
 
 Ejecuta los tests con:
 
+```bash
 pnpm test
+```
 
 Tecnologías utilizadas:
 - Jest
@@ -89,6 +95,7 @@ Los tests cubren:
 
 ## 📂 Estructura del proyecto
 
+```text
 .
 ├── app
 │   ├── exercise1
@@ -106,10 +113,3 @@ Los tests cubren:
 │       ├── rangeService.ts
 │       └── fixedRangeService.ts
 
----
-
-## 📌 Notas finales
-
-- El componente Range está diseñado para ser reutilizable.
-- La lógica de negocio se mantiene separada de la UI.
-- Los tests se escriben junto al componente para facilitar mantenimiento.
