@@ -35,7 +35,7 @@ pnpm install
 Inicia el servidor de desarrollo:
 
 ```bash
-pnpm dev --port 3000
+pnpm dev
 ```
 
 La aplicación estará disponible en:
